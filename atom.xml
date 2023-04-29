@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Liu&#39;s Blog</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2023-04-28T14:50:33.308Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Mr Liu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kali安装教程</title>
+    <link href="http://example.com/posts/f31053a2.html"/>
+    <id>http://example.com/posts/f31053a2.html</id>
+    <published>2023-04-07T12:09:36.000Z</published>
+    <updated>2023-04-28T14:50:33.308Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Kali安装教程"><a href="#Kali安装教程" class="headerlink" title="Kali安装教程"></a>Kali安装教程</h1><h3 id="Hello-This-is-Mr’Liu"><a href="#Hello-This-is-Mr’Liu" class="headerlink" title="Hello,This is Mr’Liu."></a>Hello,This is Mr’Liu.</h3><h3 id="今天我们来安装Kali"><a href="#今天我们来安装Kali" class="headerlink" title="今天我们来安装Kali"></a>今天我们来安装Kali</h3><hr><h3 id="First：What’s-the-“Kali”？"><a href="#First：What’s-the-“Kali”？" class="headerlink" title="First：What’s the “Kali”？:"></a>First：What’s the “Kali”？:</h3><span id="more"></span>><p><em><strong>Kali Linux</strong></em>  <strong>是专门用于渗透测试的Linux操作系统，它由BackTrack发展而来。在整合了IWHAX、WHOPPIX和Auditor这三种渗透测试专用Live Linux后，BackTrack正式改名为Kali Linux</strong><br><img src="https://cdnjson.com/images/2023/04/06/What-isKali.png"></p><h2 id="Second-How-to-install-Kali"><a href="#Second-How-to-install-Kali" class="headerlink" title="Second: How to install Kali?"></a>Second: <font style="background:Red">How to install Kali?</font></h2><h4 id="一、下载Kali官方镜像"><a href="#一、下载Kali官方镜像" class="headerlink" title="一、下载Kali官方镜像"></a>一、下载Kali官方镜像</h4><p>  <strong>官方网站：<a href="http://www.kali.org/">www.kali.org</a></strong></br><strong>访问kali官网，点击上方GET KALI，然后点击Bare Metal</strong><br><img src="https://cdnjson.com/images/2023/04/06/Kali-ins1.png" alt="Kali-ins1.png"><br>  <strong>然后选择版本下载镜像</strong><br><img src="https://cdnjson.com/images/2023/04/06/Kali-ins2.png" alt="Kali-ins2.png"></p><h4 id="二、VMware安装虚拟机"><a href="#二、VMware安装虚拟机" class="headerlink" title="二、VMware安装虚拟机"></a>二、VMware安装虚拟机</h4><p>  <strong>现在我们已经获取到了镜像，接下来就需要创建虚拟机了</strong></p><blockquote><ul><li><strong>点击创建虚拟机，选择自定义，下一步</strong></li><li><strong>选择刚才的系统镜像并点击下一步</strong></li><li><strong>系统选择Linux，版本选择debian 10.X64位</strong></li><li><strong>接下来酌情选择配置信息</strong></li><li><strong>确认无误后点击下一步</strong></li></ul></blockquote><h4 id="三、Kali安装配置"><a href="#三、Kali安装配置" class="headerlink" title="三、Kali安装配置"></a>三、Kali安装配置</h4><blockquote><ul><li><strong>启动刚才的虚拟机，选择”Graphical install”</strong><br><img src="https://cdnjson.com/images/2023/04/06/Kali-ins3.png" alt="Kali-ins3.png"></li><li><strong>选择语言，然后下一步</strong><br><img src="https://cdnjson.com/images/2023/04/06/ins4.png" alt="ins4.png"></li><li><strong>选择地区及键盘，然后下一步</strong></li><li><strong>主机名，随意写一个就好了</strong><br><img src="https://cdnjson.com/images/2023/04/07/ins7.png" alt="ins7.png"></li><li><strong>域名配置完成下一步</strong><br><img src="https://cdnjson.com/images/2023/04/07/ins8.png" alt="ins8.png"></li><li><strong>设置用户名及密码,之后几步无脑下一步即可</strong> <font color=Red size=4>注意：用户名不能为root或者admin</font><br><img src="https://cdnjson.com/images/2023/04/07/ins9.png" alt="ins9.png"><br><img src="https://cdnjson.com/images/2023/04/07/ins10.png" alt="ins10.png"><br><img src="https://cdnjson.com/images/2023/04/07/ins11.png" alt="ins11.png"><br><img src="https://cdnjson.com/images/2023/04/07/ins12.png" alt="ins12.png"><br><img src="https://cdnjson.com/images/2023/04/07/ins13.png" alt="ins13.png"><br><img src="https://cdnjson.com/images/2023/04/07/ins14.png" alt="ins14.png"></li><li><strong>这里要注意一下，xfce必选，最后一个可选可不选，选了会比原来多很多插件与工具，其他默认即可</strong><br><img src="https://cdnjson.com/images/2023/04/07/ins18.png" alt="ins18.png"></li><li><strong>然后就是漫长的等待</strong><br><img src="https://cdnjson.com/images/2023/04/07/ins15.png" alt="ins15.png"><h5 id="安装GRUB引导器"><a href="#安装GRUB引导器" class="headerlink" title="安装GRUB引导器"></a>安装GRUB引导器</h5><img src="https://cdnjson.com/images/2023/04/07/ins16.png" alt="ins16.png"></li><li><strong>选择第二个，接下来就是自动安装</strong><br><img src="https://cdnjson.com/images/2023/04/07/ins19.png" alt="ins19.png"></li><li><strong>等待安装完成后重启即可</strong><br><img src="https://cdnjson.com/images/2023/04/07/ins17.png" alt="ins17.png"></li><li><strong>重启后输入密码和账号就可以进入系统了</strong></br></li></ul></blockquote><h3 id="至此，Kali就算是安装完成了"><a href="#至此，Kali就算是安装完成了" class="headerlink" title="至此，Kali就算是安装完成了"></a>至此，Kali就算是安装完成了</h3><p><strong>切记:不要用Kali做weifa的事情</strong></p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Kali安装教程&quot;&gt;&lt;a href=&quot;#Kali安装教程&quot; class=&quot;headerlink&quot; title=&quot;Kali安装教程&quot;&gt;&lt;/a&gt;Kali安装教程&lt;/h1&gt;&lt;h3 id=&quot;Hello-This-is-Mr’Liu&quot;&gt;&lt;a href=&quot;#Hello-This-is-Mr’Liu&quot; class=&quot;headerlink&quot; title=&quot;Hello,This is Mr’Liu.&quot;&gt;&lt;/a&gt;Hello,This is Mr’Liu.&lt;/h3&gt;&lt;h3 id=&quot;今天我们来安装Kali&quot;&gt;&lt;a href=&quot;#今天我们来安装Kali&quot; class=&quot;headerlink&quot; title=&quot;今天我们来安装Kali&quot;&gt;&lt;/a&gt;今天我们来安装Kali&lt;/h3&gt;&lt;hr&gt;
+&lt;h3 id=&quot;First：What’s-the-“Kali”？&quot;&gt;&lt;a href=&quot;#First：What’s-the-“Kali”？&quot; class=&quot;headerlink&quot; title=&quot;First：What’s the “Kali”？:&quot;&gt;&lt;/a&gt;First：What’s the “Kali”？:&lt;/h3&gt;</summary>
+    
+    
+    
+    <category term="Kal" scheme="http://example.com/categories/Kal/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>第一篇Blog</title>
+    <link href="http://example.com/posts/d6af1ab3.html"/>
+    <id>http://example.com/posts/d6af1ab3.html</id>
+    <published>2023-04-01T10:53:13.000Z</published>
+    <updated>2023-04-29T03:59:47.632Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX19Q6T4bxroWN/Nf20/pywjrYZgWldIrxhohWwe/eyDY5A+2qQKoj1UWD0JsTvnlSXJZol2w0NIv1SXxml3TeKE8cD9LVnaX6Wpcd5CsAzXUaNpxAbHpfsOfHaVP9nIi+5xS/NNflCfyG3CzsqSFICOZEHtEAZbFw99iSvdMS+PjTFNH7FOyNNDzK25Xi5QkNtwpp6LkPNffvZDXKxDE/gsMgNWXEXj+1LPCRxChAJd/PljXvx3kqDwYbpVHbuN+59anW/0V888PQVVdrPcaWVnMLrz7tBnMh2NzWDvUuvhZXFLKZ8hU8jhT/f59cw6kzPDzJutTZ9z5oSJNTxOA1CziSffPdERQd7mN4lbKxWZ1UYzBYZ9uTswVA0k+5TFGo1iEB2MI9sV3a2R9XHE48nzjw2ax7LlEwrC9e17J1FGVoof1eNs5/9Qem+nqBP7y25pppykBsEiJrn8nv2VA+lsEWGMmJj8IaqIAiRlaEWJrCg5gaT/7hYc/uZYKk+X4VsUoUrG0NwzLyTgntw7c73EmrJHm8xw9ZfgI8Rr6gxvmwdnnrfbg9jJFk4DXxnFy0F2IVP4W1aYa3mjk6Dr5GNywEWMCDNgzT4HU79/XRuBfGnsLoCyIodqGTjR/AYRql4S3550BrwQbL0AafX0DbbB/y7dxdbDBH2SErob5GpdW2F5J8AZauhP/sXmOqyZwnB8TpUdpoCguMPqAVewHu60yLEwOkG68e909pjNuaAWQaCDun3e2JjRwN5HpQTeL1OXe9lVAgWW8I6aQKnJ/9Dkqz0j/5Mwszy++9FfYBv94piipxdng/KW/76PuMoX9mrBz2bC4sUGFW2PO356Gn/vCsRK5cf3BIMDSzR0eOBOeylmBbXzeL98lghNilVk2VmTicGZUW2wg5c+q/stnbfaOX8qGKChfrrnq18UUN9frjs2lp01L/eZqd0FlW+J+n14hcfKoye1+DLTMBsfBp5Dlalk08b149QkgUqs8qFzEHU8DChyxrdn/kC/rcK0B946v0TWNty/QOIc6CMgGgNIC0vk0W/ywnS+9U42pUHS+0H477j1iU7inHd5J464gobeTWfR2klbGu2kWNJ4L9XB4PcppY8rmCRKOTFnWpYNlG2nhr+1Ghu3nYQE2Chqvq9JFAU807MLMupXwQo8Lh82ee0NoN6YBnGrwPMJHh4vk7TQaf8EdTGftuvnzEj3OziVZJdVMQCtVbGV1jCB8KJGcxOuGmB7L4AE7YkI5rtS+SMUhR9Rsi8QmMENIVWGukzPqYr/FpTFMZaTdIe/f0zc8cRmea5JPlmBP+WOQGL+tpboJ+xQLtZLRGDFmz1+s8nbRiOQdIi+Ej64p3WBlBR9KQXB3V2328Ktv7C0ZZOGzauIWf3hOMRRDjPkmo1IRQ1I4uvQ6+vgH0JIAWPHLQzOQclqgolU/DGyuuMOG8hUVdgcOblJvRfH41TbsXok9U4hDhu0DZ5vVkCYe/KlcRhUT4OpnE6M0U8YKwGOUGk/3r7CdVjhqlJirsuMc+RlvuMRfoz/ZUVCFkzGq2SFnMAYhWOwM0UCrVZXwiOk56Trpn5TYW6Tyybc/WIFNoMBhoO9Fr5qYFATFwEZ0bKiwIXEq/WM2brJVraI=</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="生活" scheme="http://example.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+  </entry>
+  
+</feed>
