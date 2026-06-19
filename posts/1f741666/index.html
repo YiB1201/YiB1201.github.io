@@ -1,0 +1,1074 @@
+  <!DOCTYPE html>
+  <html lang="zh-CN"  
+      data-theme-mode="auto"
+  >
+  <head>
+  <meta charset="utf-8">
+  
+  
+  
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_4k4bc36ef96';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)"},"fail":{"zh-CN":"杂鱼，复制失败 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
+  <title>
+    视觉一中开发日志 | Liu &#39;s Development Log
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_4k4bc36ef96.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+    <meta name="description" content="📸 视觉一中 — 开发历程 呼和浩特第一中学 · 学生图片分享平台从一颗记录校园生活的种子，成长为一个功能完整的图片社区。   版本一览   版本 代号 主题    v0.1 🥚 萌芽 静态页面雏形   v0.2 🏗️ 筑基 OSS 接入与图片上传   v0.3 🖼️ 画廊 图片展示与浏览   v0.4 ❤️ 互动 点赞系统上线   v0.5 🔒 安全 删除密码与权限管理   v0.6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="视觉一中开发日志">
+<meta property="og:url" content="http://example.com/posts/1f741666/index.html">
+<meta property="og:site_name" content="Liu &#39;s Development Log">
+<meta property="og:description" content="📸 视觉一中 — 开发历程 呼和浩特第一中学 · 学生图片分享平台从一颗记录校园生活的种子，成长为一个功能完整的图片社区。   版本一览   版本 代号 主题    v0.1 🥚 萌芽 静态页面雏形   v0.2 🏗️ 筑基 OSS 接入与图片上传   v0.3 🖼️ 画廊 图片展示与浏览   v0.4 ❤️ 互动 点赞系统上线   v0.5 🔒 安全 删除密码与权限管理   v0.6">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-12-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-19T18:27:57.680Z">
+<meta property="article:author" content="ZnSO4">
+<meta property="article:tag" content="development, programming, blog">
+<meta name="twitter:card" content="summary">
+      <meta name="keywords" content="development, programming, blog">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx/1oA/0l8ysE" crossorigin="anonymous">
+      
+<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous">
+
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css" integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous">
+
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj+vDDLIL+xBGQU/voDBY5XE2lVh" crossorigin="anonymous">
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+  <body>
+      <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate">
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var loaderEl = document.getElementById('loader');
+    var startLoading = () => {
+      time = Date.now();
+      loaderEl.classList.remove("loading");
+    }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
+    var endLoading = () => {
+      if (!time) {
+        hideLoader();
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          hideLoader();
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    loaderEl.addEventListener('click', endLoading);
+  </script>
+<div id="copy-tooltip"></div>
+<div id="heatmap-tooltip"></div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav" aria-label="Primary navigation">
+        <a class="main-nav-link-wrap" href="/">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">首页</span>
+        </span>
+        <a class="main-nav-link-wrap" href="/archives">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">归档</span>
+        </span>
+        <a class="main-nav-link-wrap" href="/about">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">关于</span>
+        </span>
+        <a class="main-nav-link-wrap" href="/friend">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">友链</span>
+        </span>
+    <a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
+  </nav>
+  <nav id="sub-nav" aria-label="Secondary navigation">
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜索" aria-label="搜索"></a>
+  </nav>
+</div>
+<header id="header" aria-label="Site header">
+        <picture>
+        </picture>
+          <img  fetchpriority="high" src="/images/banner.webp" alt="视觉一中开发日志">
+  <div id="header-outer">
+    <div id="header-title">
+          <span id="logo">
+            <h1 data-aos="slide-up">视觉一中开发日志</h1>
+          </span>
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+        </h2>
+    </div>
+  </div>
+</header>
+
+        <div id="content" aria-label="Page content" class="sidebar-left"  >
+          <aside id="sidebar" aria-label="Sidebar">
+  <div class="sidebar-wrapper-container sticky">
+      <meting-js
+        theme="var(--color-link)"
+        id="7454988215"
+        server="netease"
+        type="playlist"
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      ></meting-js>
+  <div class="sidebar-wrapper">
+    <div class="sidebar-wrap" data-aos="fade-up">
+          <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%93%B8-%E8%A7%86%E8%A7%89%E4%B8%80%E4%B8%AD-%E2%80%94-%E5%BC%80%E5%8F%91%E5%8E%86%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">📸 视觉一中 — 开发历程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E4%B8%80%E8%A7%88"><span class="toc-number">1.1.</span> <span class="toc-text">版本一览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-1-%E2%80%94-%F0%9F%A5%9A-%E8%90%8C%E8%8A%BD-%E2%80%9C%E4%BB%8E%E4%B8%80%E8%A1%8C-HTML-%E5%BC%80%E5%A7%8B%E2%80%9D"><span class="toc-number">1.2.</span> <span class="toc-text">v0.1 — 🥚 萌芽 “从一行 HTML 开始”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96"><span class="toc-number">1.2.1.</span> <span class="toc-text">变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%93%E6%97%B6%E7%9A%84%E6%A0%B7%E5%AD%90"><span class="toc-number">1.2.2.</span> <span class="toc-text">当时的样子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-2-%E2%80%94-%F0%9F%8F%97%EF%B8%8F-%E7%AD%91%E5%9F%BA-%E2%80%9C%E8%AE%A9%E5%9B%BE%E7%89%87%E7%9C%9F%E6%AD%A3%E5%B1%9E%E4%BA%8E%E4%BA%91%E7%AB%AF%E2%80%9D"><span class="toc-number">1.3.</span> <span class="toc-text">v0.2 — 🏗️ 筑基 “让图片真正属于云端”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-1"><span class="toc-number">1.3.1.</span> <span class="toc-text">变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.2.</span> <span class="toc-text">新增文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-3-%E2%80%94-%F0%9F%96%BC%EF%B8%8F-%E7%94%BB%E5%BB%8A-%E2%80%9C%E8%AE%A9%E4%BD%9C%E5%93%81%E8%A2%AB%E7%9C%8B%E8%A7%81%E2%80%9D"><span class="toc-number">1.4.</span> <span class="toc-text">v0.3 — 🖼️ 画廊 “让作品被看见”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-2"><span class="toc-number">1.4.1.</span> <span class="toc-text">变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E4%BB%B6-1"><span class="toc-number">1.4.2.</span> <span class="toc-text">新增文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-4-%E2%80%94-%E2%9D%A4%EF%B8%8F-%E4%BA%92%E5%8A%A8-%E2%80%9C%E6%AF%8F%E4%B8%80%E4%BB%BD%E5%96%9C%E6%AC%A2%E9%83%BD%E5%80%BC%E5%BE%97%E8%A2%AB%E8%AE%B0%E5%BD%95%E2%80%9D"><span class="toc-number">1.5.</span> <span class="toc-text">v0.4 — ❤️ 互动 “每一份喜欢都值得被记录”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-3"><span class="toc-number">1.5.1.</span> <span class="toc-text">变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E4%BA%AE%E7%82%B9"><span class="toc-number">1.5.2.</span> <span class="toc-text">技术亮点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-5-%E2%80%94-%F0%9F%94%92-%E5%AE%89%E5%85%A8-%E2%80%9C%E4%BD%A0%E7%9A%84%E4%BD%9C%E5%93%81%E4%BD%A0%E5%81%9A%E4%B8%BB%E2%80%9D"><span class="toc-number">1.6.</span> <span class="toc-text">v0.5 — 🔒 安全 “你的作品你做主”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-4"><span class="toc-number">1.6.1.</span> <span class="toc-text">变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E4%BB%B6-2"><span class="toc-number">1.6.2.</span> <span class="toc-text">新增文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-6-%E2%80%94-%F0%9F%8E%A8-%E7%84%95%E9%A2%9C-%E2%80%9C%E9%A2%9C%E5%80%BC%E5%B0%B1%E6%98%AF%E7%94%9F%E4%BA%A7%E5%8A%9B%E2%80%9D"><span class="toc-number">1.7.</span> <span class="toc-text">v0.6 — 🎨 焕颜 “颜值就是生产力”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-5"><span class="toc-number">1.7.1.</span> <span class="toc-text">变化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%A7%A9-%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F-command-css"><span class="toc-number">1.7.1.1.</span> <span class="toc-text">🧩 设计系统 (command.css)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%8F%A0-%E9%A6%96%E9%A1%B5%E9%87%8D%E6%9E%84-index-html"><span class="toc-number">1.7.1.2.</span> <span class="toc-text">🏠 首页重构 (index.html)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%92%A1-%E5%85%B3%E4%BA%8E%E9%A1%B5-about-html"><span class="toc-number">1.7.1.3.</span> <span class="toc-text">💡 关于页 (about.html)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%93%A4-%E4%B8%8A%E4%BC%A0%E9%A1%B5-upload-html"><span class="toc-number">1.7.1.4.</span> <span class="toc-text">📤 上传页 (upload.html)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-7-%E2%80%94-%E2%9A%A1-%E6%9E%81%E9%80%9F-%E2%80%9C%E5%BF%AB%EF%BC%8C%E6%98%AF%E6%9C%80%E5%A4%A7%E7%9A%84%E8%AF%9A%E6%84%8F%E2%80%9D"><span class="toc-number">1.8.</span> <span class="toc-text">v0.7 — ⚡ 极速 “快，是最大的诚意”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E8%AF%8A%E6%96%AD"><span class="toc-number">1.8.1.</span> <span class="toc-text">问题诊断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E6%8E%AA%E6%96%BD"><span class="toc-number">1.8.2.</span> <span class="toc-text">优化措施</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AF%B9%E6%AF%94"><span class="toc-number">1.8.3.</span> <span class="toc-text">数据对比</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-8-%E2%80%94-%F0%9F%8F%86-%E6%8E%92%E8%A1%8C-%E2%80%9C%E8%AE%A9%E4%BC%98%E7%A7%80%E8%A2%AB%E7%9C%8B%E8%A7%81%E2%80%9D"><span class="toc-number">1.9.</span> <span class="toc-text">v0.8 — 🏆 排行 “让优秀被看见”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-6"><span class="toc-number">1.9.1.</span> <span class="toc-text">变化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-9-%E2%80%94-%F0%9F%93%B1-%E5%93%8D%E5%BA%94-%E2%80%9C%E5%A4%A7%E5%B1%8F%E5%B0%8F%E5%B1%8F%EF%BC%8C%E4%BD%93%E9%AA%8C%E5%A6%82%E4%B8%80%E2%80%9D"><span class="toc-number">1.10.</span> <span class="toc-text">v0.9 — 📱 响应 “大屏小屏，体验如一”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-7"><span class="toc-number">1.10.1.</span> <span class="toc-text">变化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%93%B1-%E5%93%8D%E5%BA%94%E5%BC%8F%E5%A4%A7%E4%BF%AE"><span class="toc-number">1.10.1.1.</span> <span class="toc-text">📱 响应式大修</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%94%A7-%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E7%84%95%E6%96%B0"><span class="toc-number">1.10.1.2.</span> <span class="toc-text">🔧 管理后台焕新</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v1-0-%E2%80%94-%F0%9F%9A%80-%E5%90%AF%E8%88%AA-%E2%80%9C%E6%95%85%E4%BA%8B%E5%88%9A%E5%88%9A%E5%BC%80%E5%A7%8B%E2%80%9D"><span class="toc-number">1.11.</span> <span class="toc-text">v1.0 — 🚀 启航 “故事刚刚开始”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E6%95%B0%E6%8D%AE"><span class="toc-number">1.11.1.</span> <span class="toc-text">最终数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.11.2.</span> <span class="toc-text">项目结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="toc-number">1.11.3.</span> <span class="toc-text">技术栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%B4%E8%B0%A2"><span class="toc-number">1.11.4.</span> <span class="toc-text">致谢</span></a></li></ol></li></ol></li></ol>
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="ZnSO4" class="lazyload">
+  <div class="sidebar-author-name">ZnSO4</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">4</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social" >
+</div>
+<div class="sidebar-menu">
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+</div>
+</div>
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
+    </div>
+  </div>
+  <div class="sidebar-widget">
+  </div>
+  </div>
+</aside>
+
+          <section id="main" aria-label="Main content"><article id="post-视觉一中开发日志" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <span class="article-date-link icon-calendar" data-aos="zoom-in">
+    <time datetime="2025-12-30T16:00:00.000Z" itemprop="datePublished">2025-12-31</time>
+    <time style="display: none;" id="post-update-time">2026-06-20</time>
+  </span>
+</div>
+
+    </div>
+    
+    <div class="hr-line"></div>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+        <h1 id="📸-视觉一中-—-开发历程"><a href="#📸-视觉一中-—-开发历程" class="headerlink" title="📸 视觉一中 — 开发历程"></a>📸 视觉一中 — 开发历程</h1><blockquote>
+<p><strong>呼和浩特第一中学 · 学生图片分享平台</strong><br>从一颗记录校园生活的种子，成长为一个功能完整的图片社区。</p>
+</blockquote>
+<hr>
+<h2 id="版本一览"><a href="#版本一览" class="headerlink" title="版本一览"></a>版本一览</h2><table>
+<thead>
+<tr>
+<th align="center">版本</th>
+<th align="left">代号</th>
+<th align="left">主题</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">v0.1</td>
+<td align="left">🥚 <strong>萌芽</strong></td>
+<td align="left">静态页面雏形</td>
+</tr>
+<tr>
+<td align="center">v0.2</td>
+<td align="left">🏗️ <strong>筑基</strong></td>
+<td align="left">OSS 接入与图片上传</td>
+</tr>
+<tr>
+<td align="center">v0.3</td>
+<td align="left">🖼️ <strong>画廊</strong></td>
+<td align="left">图片展示与浏览</td>
+</tr>
+<tr>
+<td align="center">v0.4</td>
+<td align="left">❤️ <strong>互动</strong></td>
+<td align="left">点赞系统上线</td>
+</tr>
+<tr>
+<td align="center">v0.5</td>
+<td align="left">🔒 <strong>安全</strong></td>
+<td align="left">删除密码与权限管理</td>
+</tr>
+<tr>
+<td align="center">v0.6</td>
+<td align="left">🎨 <strong>焕颜</strong></td>
+<td align="left">UI 全面重构 — 毛玻璃设计系统</td>
+</tr>
+<tr>
+<td align="center">v0.7</td>
+<td align="left">⚡ <strong>极速</strong></td>
+<td align="left">性能优化 — 图片压缩与懒加载</td>
+</tr>
+<tr>
+<td align="center">v0.8</td>
+<td align="left">🏆 <strong>排行</strong></td>
+<td align="left">排行榜与数据统计</td>
+</tr>
+<tr>
+<td align="center">v0.9</td>
+<td align="left">📱 <strong>响应</strong></td>
+<td align="left">移动端适配与管理后台</td>
+</tr>
+<tr>
+<td align="center">v1.0</td>
+<td align="left">🚀 <strong>启航</strong></td>
+<td align="left">正式发布</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="v0-1-—-🥚-萌芽-“从一行-HTML-开始”"><a href="#v0-1-—-🥚-萌芽-“从一行-HTML-开始”" class="headerlink" title="v0.1 — 🥚 萌芽 “从一行 HTML 开始”"></a>v0.1 — 🥚 萌芽 <em>“从一行 HTML 开始”</em></h2><blockquote>
+<p>2025 年秋，一个普通的晚自习后，第一行代码被敲下。</p>
+</blockquote>
+<h3 id="变化"><a href="#变化" class="headerlink" title="变化"></a>变化</h3><ul>
+<li>创建项目骨架，搭建最基本的静态页面</li>
+<li><code>index.html</code>：一个简单的欢迎页，只有标题”视觉一中”和一句话介绍</li>
+<li>纯手工 CSS，没有任何框架依赖</li>
+<li>图片来自 OSS 的静态链接，硬编码在 HTML 中</li>
+<li>所有样式写在 <code>&lt;style&gt;</code> 标签里，全页不超过 200 行</li>
+</ul>
+<h3 id="当时的样子"><a href="#当时的样子" class="headerlink" title="当时的样子"></a>当时的样子</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">index.html         ← 唯一的页面</span><br><span class="line">css/</span><br><span class="line">  style.css        ← 所有样式挤在一个文件里</span><br><span class="line">images/            ← 放了几张测试图</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><em>“先跑起来再说。”</em></p>
+</blockquote>
+<hr>
+<h2 id="v0-2-—-🏗️-筑基-“让图片真正属于云端”"><a href="#v0-2-—-🏗️-筑基-“让图片真正属于云端”" class="headerlink" title="v0.2 — 🏗️ 筑基 “让图片真正属于云端”"></a>v0.2 — 🏗️ 筑基 <em>“让图片真正属于云端”</em></h2><blockquote>
+<p>接入阿里云 OSS，上传不再是梦。</p>
+</blockquote>
+<h3 id="变化-1"><a href="#变化-1" class="headerlink" title="变化"></a>变化</h3><ul>
+<li>引入 <code>ali-oss</code> SDK，打通 STS 临时授权流程</li>
+<li>创建 <code>utils.js</code>：封装 STS 凭证获取、过期刷新逻辑</li>
+<li>创建 <code>upload.js</code>：实现单张图片上传、进度条反馈</li>
+<li><code>upload.html</code>：第一个交互页面诞生</li>
+<li>图片不再硬编码，而是从 OSS 动态获取</li>
+</ul>
+<h3 id="新增文件"><a href="#新增文件" class="headerlink" title="新增文件"></a>新增文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">js/</span><br><span class="line">  utils.js          ← STS 授权 &amp; 工具函数</span><br><span class="line">  upload.js         ← OSS 上传逻辑</span><br><span class="line">css/</span><br><span class="line">  upload.css        ← 上传页样式</span><br><span class="line">upload.html         ← 上传页面</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><em>“能传图了！虽然一次只能传一张。”</em></p>
+</blockquote>
+<hr>
+<h2 id="v0-3-—-🖼️-画廊-“让作品被看见”"><a href="#v0-3-—-🖼️-画廊-“让作品被看见”" class="headerlink" title="v0.3 — 🖼️ 画廊 “让作品被看见”"></a>v0.3 — 🖼️ 画廊 <em>“让作品被看见”</em></h2><blockquote>
+<p>图片有了展示的舞台，画廊页面诞生。</p>
+</blockquote>
+<h3 id="变化-2"><a href="#变化-2" class="headerlink" title="变化"></a>变化</h3><ul>
+<li><code>shows.html</code>：全新画廊页面，网格布局展示所有图片</li>
+<li><code>show.js</code>：从 OSS 拉取图片列表，动态渲染卡片</li>
+<li>引入 <strong>Viewer.js</strong>：点击图片可放大查看、缩放、旋转</li>
+<li>引入 <code>ossManager.js</code>：统一管理 OSS 客户端实例</li>
+<li><code>show.css</code>：卡片式布局，阴影 + 圆角</li>
+<li>首页 <code>index.html</code> 新增”每周精选”板块，展示点赞最多的 5 张图</li>
+</ul>
+<h3 id="新增文件-1"><a href="#新增文件-1" class="headerlink" title="新增文件"></a>新增文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">js/</span><br><span class="line">  ossManager.js     ← OSS 客户端管理</span><br><span class="line">  show.js           ← 画廊渲染逻辑</span><br><span class="line">css/</span><br><span class="line">  show.css          ← 画廊样式</span><br><span class="line">shows.html          ← 画廊页面</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><em>“看着图片一张张渲染出来，成就感拉满。”</em></p>
+</blockquote>
+<hr>
+<h2 id="v0-4-—-❤️-互动-“每一份喜欢都值得被记录”"><a href="#v0-4-—-❤️-互动-“每一份喜欢都值得被记录”" class="headerlink" title="v0.4 — ❤️ 互动 “每一份喜欢都值得被记录”"></a>v0.4 — ❤️ 互动 <em>“每一份喜欢都值得被记录”</em></h2><blockquote>
+<p>点赞功能上线，作品有了温度。</p>
+</blockquote>
+<h3 id="变化-3"><a href="#变化-3" class="headerlink" title="变化"></a>变化</h3><ul>
+<li>图片卡片增加 ❤️ 点赞按钮，点击即时 +1</li>
+<li>点赞数据同步到 OSS <code>index.json</code>，持久化存储</li>
+<li>引入 <strong>localStorage 缓存</strong>：已点赞记录本地保存，刷新不丢失</li>
+<li>点赞防重复：同一张图只能点一次</li>
+<li>首页统计数字从云端实时获取（照片数、累计点赞、创作者数）</li>
+<li>排序逻辑优化：每周精选按点赞数降序排列</li>
+</ul>
+<h3 id="技术亮点"><a href="#技术亮点" class="headerlink" title="技术亮点"></a>技术亮点</h3><ul>
+<li>点赞异步批量同步（3500ms 防抖），减少 OSS 写入次数</li>
+<li>本地缓存 + 远程同步双保险</li>
+</ul>
+<blockquote>
+<p><em>“有人点赞了！这功能没白做。”</em></p>
+</blockquote>
+<hr>
+<h2 id="v0-5-—-🔒-安全-“你的作品你做主”"><a href="#v0-5-—-🔒-安全-“你的作品你做主”" class="headerlink" title="v0.5 — 🔒 安全 “你的作品你做主”"></a>v0.5 — 🔒 安全 <em>“你的作品你做主”</em></h2><blockquote>
+<p>删除密码系统，让每张图都有主人。</p>
+</blockquote>
+<h3 id="变化-4"><a href="#变化-4" class="headerlink" title="变化"></a>变化</h3><ul>
+<li>上传时可设置<strong>删除密码</strong>，密码经 SHA-256 哈希后存储</li>
+<li>画廊卡片增加 ⋮ 菜单 →「删除」选项</li>
+<li>删除需要验证密码，哈希比对，不存明文</li>
+<li>管理员页面 <code>manager.html</code> 诞生：批量管理所有索引</li>
+<li>管理页支持：<ul>
+<li>双标签切换（图片索引 &#x2F; 视频索引）</li>
+<li>在线编辑标题、作者、点赞数</li>
+<li>标记删除 → 批量保存 → OSS 物理删除</li>
+</ul>
+</li>
+</ul>
+<h3 id="新增文件-2"><a href="#新增文件-2" class="headerlink" title="新增文件"></a>新增文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">manager.html        ← 管理员后台</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><em>“现在可以放心让大家上传了。”</em></p>
+</blockquote>
+<hr>
+<h2 id="v0-6-—-🎨-焕颜-“颜值就是生产力”"><a href="#v0-6-—-🎨-焕颜-“颜值就是生产力”" class="headerlink" title="v0.6 — 🎨 焕颜 “颜值就是生产力”"></a>v0.6 — 🎨 焕颜 <em>“颜值就是生产力”</em></h2><blockquote>
+<p>UI 全面重构，毛玻璃设计系统上线。</p>
+</blockquote>
+<h3 id="变化-5"><a href="#变化-5" class="headerlink" title="变化"></a>变化</h3><h4 id="🧩-设计系统-command-css"><a href="#🧩-设计系统-command-css" class="headerlink" title="🧩 设计系统 (command.css)"></a>🧩 设计系统 (<code>command.css</code>)</h4><ul>
+<li>CSS 变量体系：主色、阴影、圆角、间距、动画曲线统一管理</li>
+<li>通用组件：<code>.btn</code> 按钮系列、<code>.glass-card</code> 玻璃卡片、<code>.spinner</code> 加载</li>
+<li>动画系统：<code>reveal</code> 滚动渐入、<code>float</code> 浮动、<code>skeleton</code> 骨架屏</li>
+<li>响应式断点：480px &#x2F; 768px &#x2F; 1024px 三档适配</li>
+</ul>
+<h4 id="🏠-首页重构-index-html"><a href="#🏠-首页重构-index-html" class="headerlink" title="🏠 首页重构 (index.html)"></a>🏠 首页重构 (<code>index.html</code>)</h4><ul>
+<li><strong>粒子 Hero</strong>：深色渐变背景 + 浮动粒子 + 光晕动画</li>
+<li><strong>统计计数器</strong>：数字递增动画，从云端拉取实时数据</li>
+<li><strong>功能卡片</strong>：6 张功能介绍卡片，悬停上浮动效</li>
+<li><strong>CTA 召唤区</strong>：渐变背景 + 图案纹理</li>
+<li><strong>Footer</strong>：四栏布局（品牌 + 导航 + 统计 + 联系）</li>
+</ul>
+<h4 id="💡-关于页-about-html"><a href="#💡-关于页-about-html" class="headerlink" title="💡 关于页 (about.html)"></a>💡 关于页 (<code>about.html</code>)</h4><ul>
+<li>Hero 横幅 + 站点实时数据</li>
+<li>承诺标签 + 理念价值观三栏卡片</li>
+<li>联系方式横向布局，模态框弹性动画</li>
+</ul>
+<h4 id="📤-上传页-upload-html"><a href="#📤-上传页-upload-html" class="headerlink" title="📤 上传页 (upload.html)"></a>📤 上传页 (<code>upload.html</code>)</h4><ul>
+<li>文件预览缩略图网格</li>
+<li>上传须知侧边栏</li>
+<li>进度条渐变动画</li>
+</ul>
+<blockquote>
+<p><em>“这才像一个正经产品该有的样子。”</em></p>
+</blockquote>
+<hr>
+<h2 id="v0-7-—-⚡-极速-“快，是最大的诚意”"><a href="#v0-7-—-⚡-极速-“快，是最大的诚意”" class="headerlink" title="v0.7 — ⚡ 极速 “快，是最大的诚意”"></a>v0.7 — ⚡ 极速 <em>“快，是最大的诚意”</em></h2><blockquote>
+<p>性能全面优化，加载速度提升 3 倍。</p>
+</blockquote>
+<h3 id="问题诊断"><a href="#问题诊断" class="headerlink" title="问题诊断"></a>问题诊断</h3><ul>
+<li>图片原始分辨率过高（单张 3-8MB）</li>
+<li>每批并发加载 11 张，网络请求拥堵</li>
+<li>离屏卡片仍然参与渲染计算</li>
+<li><code>setInterval</code> 每秒轮询 DOM，CPU 空转</li>
+</ul>
+<h3 id="优化措施"><a href="#优化措施" class="headerlink" title="优化措施"></a>优化措施</h3><table>
+<thead>
+<tr>
+<th align="left">优化项</th>
+<th align="left">改动</th>
+<th align="left">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>OSS 图片压缩</strong></td>
+<td align="left">URL 追加 <code>?x-oss-process=image/resize,w_600</code></td>
+<td align="left">图片体积 ↓<strong>80%</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>减少并发</strong></td>
+<td align="left"><code>PAGE_SIZE</code>: 11 → 6</td>
+<td align="left">请求数 ↓<strong>45%</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>异步解码</strong></td>
+<td align="left"><code>&lt;img decoding=&quot;async&quot;&gt;</code></td>
+<td align="left">不阻塞主线程</td>
+</tr>
+<tr>
+<td align="left"><strong>降低优先级</strong></td>
+<td align="left"><code>fetchpriority=&quot;low&quot;</code></td>
+<td align="left">优先保证交互</td>
+</tr>
+<tr>
+<td align="left"><strong>跳过离屏渲染</strong></td>
+<td align="left"><code>content-visibility: auto</code></td>
+<td align="left">渲染量 ↓<strong>60%</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>移除轮询</strong></td>
+<td align="left"><code>setInterval</code> → <code>MutationObserver</code></td>
+<td align="left">CPU 空闲</td>
+</tr>
+<tr>
+<td align="left"><strong>滚动节流</strong></td>
+<td align="left"><code>requestAnimationFrame</code></td>
+<td align="left">滚动流畅</td>
+</tr>
+<tr>
+<td align="left"><strong>加载降级</strong></td>
+<td align="left"><code>onerror</code> → 去掉处理参数重试原图</td>
+<td align="left">不显示裂图</td>
+</tr>
+</tbody></table>
+<h3 id="数据对比"><a href="#数据对比" class="headerlink" title="数据对比"></a>数据对比</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">优化前: 首屏加载 ~4.2s, 滚动卡顿明显</span><br><span class="line">优化后: 首屏加载 ~1.3s, 滚动丝般顺滑</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><em>“用户不会告诉你网站慢，他们只会默默关掉。”</em></p>
+</blockquote>
+<hr>
+<h2 id="v0-8-—-🏆-排行-“让优秀被看见”"><a href="#v0-8-—-🏆-排行-“让优秀被看见”" class="headerlink" title="v0.8 — 🏆 排行 “让优秀被看见”"></a>v0.8 — 🏆 排行 <em>“让优秀被看见”</em></h2><blockquote>
+<p>排行榜独立页面，数据一目了然。</p>
+</blockquote>
+<h3 id="变化-6"><a href="#变化-6" class="headerlink" title="变化"></a>变化</h3><ul>
+<li><code>ranking.html</code>：全新排行榜页面</li>
+<li>双排序模式：<ul>
+<li>🔥 <strong>热门排行</strong>：按点赞数降序，取前 50 名</li>
+<li>🆕 <strong>最新上传</strong>：按上传时间降序</li>
+</ul>
+</li>
+<li><strong>前三名特殊样式</strong>：🥇 金色 &#x2F; 🥈 银色 &#x2F; 🥉 铜色</li>
+<li>顶部统计摘要：作品总数 &#x2F; 累计点赞 &#x2F; 最高点赞</li>
+<li>缩略图智能检测：DNG 等不支持格式自动显示 📄 占位</li>
+<li>所有页面导航栏 + Footer 同步新增排行入口</li>
+</ul>
+<blockquote>
+<p><em>“竞争是进步的动力——哪怕只是为了上个榜。”</em></p>
+</blockquote>
+<hr>
+<h2 id="v0-9-—-📱-响应-“大屏小屏，体验如一”"><a href="#v0-9-—-📱-响应-“大屏小屏，体验如一”" class="headerlink" title="v0.9 — 📱 响应 “大屏小屏，体验如一”"></a>v0.9 — 📱 响应 <em>“大屏小屏，体验如一”</em></h2><blockquote>
+<p>移动端全面适配，管理后台焕新。</p>
+</blockquote>
+<h3 id="变化-7"><a href="#变化-7" class="headerlink" title="变化"></a>变化</h3><h4 id="📱-响应式大修"><a href="#📱-响应式大修" class="headerlink" title="📱 响应式大修"></a>📱 响应式大修</h4><ul>
+<li>所有页面适配手机端（≤768px）</li>
+<li>导航栏压缩：字号缩小、间距紧凑</li>
+<li>画廊网格自适应：桌面 5 列 → 平板 3 列 → 手机 2 列</li>
+<li>上传页桌面双栏 → 移动端堆叠</li>
+<li>排行榜卡片间距、字号逐级缩小</li>
+</ul>
+<h4 id="🔧-管理后台焕新"><a href="#🔧-管理后台焕新" class="headerlink" title="🔧 管理后台焕新"></a>🔧 管理后台焕新</h4><ul>
+<li>新增 Hero 横幅 + 玻璃拟态卡片容器</li>
+<li>胶囊式 Tabs 替代旧式下划线</li>
+<li>资源计数实时显示、输入框聚焦光晕</li>
+<li>表格行悬停高亮、移除按钮悬停变实心</li>
+</ul>
+<blockquote>
+<p><em>“在教室用手机打开，一样好看。”</em></p>
+</blockquote>
+<hr>
+<h2 id="v1-0-—-🚀-启航-“故事刚刚开始”"><a href="#v1-0-—-🚀-启航-“故事刚刚开始”" class="headerlink" title="v1.0 — 🚀 启航 “故事刚刚开始”"></a>v1.0 — 🚀 启航 <em>“故事刚刚开始”</em></h2><blockquote>
+<p>从一个人的业余项目，到一群人的校园记忆库。</p>
+</blockquote>
+<h3 id="最终数据"><a href="#最终数据" class="headerlink" title="最终数据"></a>最终数据</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">📸  25 张作品   ❤️  104 个点赞</span><br><span class="line">👥  8 位创作者  🏆  最高 8 点赞</span><br><span class="line">📂  5 个页面     📦  1 个 OSS 存储桶</span><br></pre></td></tr></table></figure>
+
+<h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">dji Osmo video--online/</span><br><span class="line">├── index.html          ← 首页 (Hero + 统计 + 功能 + 精选)</span><br><span class="line">├── shows.html          ← 画廊 (无限滚动 + ViewerJS + 点赞)</span><br><span class="line">├── upload.html         ← 上传 (拖拽 + 预览 + 进度)</span><br><span class="line">├── ranking.html        ← 排行 (热门/最新 + 前三名)</span><br><span class="line">├── about.html          ← 关于 (理念 + 联系 + 赞助)</span><br><span class="line">├── manager.html        ← 管理 (索引编辑 + 批量删除)</span><br><span class="line">├── CHANGELOG.md        ← 本文件</span><br><span class="line">├── css/</span><br><span class="line">│   ├── command.css     ← 全局设计系统</span><br><span class="line">│   ├── show.css        ← 画廊样式</span><br><span class="line">│   └── upload.css      ← 上传页样式</span><br><span class="line">└── js/</span><br><span class="line">    ├── utils.js        ← STS 授权</span><br><span class="line">    ├── ossManager.js   ← OSS 客户端管理</span><br><span class="line">    ├── upload.js       ← 上传逻辑</span><br><span class="line">    └── show.js         ← 画廊渲染 &amp; 点赞</span><br></pre></td></tr></table></figure>
+
+<h3 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h3><table>
+<thead>
+<tr>
+<th align="left">层</th>
+<th align="left">技术</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">前端</td>
+<td align="left">原生 HTML + CSS + JavaScript</td>
+</tr>
+<tr>
+<td align="left">存储</td>
+<td align="left">阿里云 OSS (图片 + JSON 索引)</td>
+</tr>
+<tr>
+<td align="left">授权</td>
+<td align="left">阿里云 STS 临时令牌</td>
+</tr>
+<tr>
+<td align="left">图片查看</td>
+<td align="left">Viewer.js</td>
+</tr>
+<tr>
+<td align="left">SDK</td>
+<td align="left">aliyun-oss-sdk-6.x</td>
+</tr>
+<tr>
+<td align="left">图片处理</td>
+<td align="left">OSS Image Processing (resize)</td>
+</tr>
+</tbody></table>
+<h3 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h3><p>感谢每一位上传作品的同学，是你们让这个平台有了生命。<br>感谢每一个点赞，让创作者感受到被看见的喜悦。<br>感谢每一次反馈，让这个项目变得更好。</p>
+<hr>
+<blockquote>
+<p><strong>视觉一中 — 用镜头记录青春</strong><br>项目始于 2025 年秋 · 持续维护中<br>✨ 如果你喜欢这个项目，欢迎赞助支持 ☕</p>
+</blockquote>
+<hr>
+
+    </div>
+    <footer class="article-footer">
+        <a data-aos="zoom-in" href="/posts/1f741666/#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/posts/1f741666/" itemprop="commentCount"></span>
+          留言
+        </a>
+        <span data-aos="zoom-in" class="article-visitor-link">
+          <span class="waline-pageview-count" data-path="/posts/1f741666/">0</span>
+          <em class="post-meta-item-text">阅读量</em>
+        </span>
+        <a class="article-category-link" href="/categories/%E5%BC%80%E5%8F%91/" title="开发" data-aos="zoom-in">开发</a><a class="article-category-link" href="/categories/%E5%BC%80%E5%8F%91/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" title="更新日志" data-aos="zoom-in">更新日志</a><a class="article-category-link" href="/categories/%E5%BC%80%E5%8F%91/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/%E8%A7%86%E8%A7%89%E4%B8%80%E4%B8%AD/" title="视觉一中" data-aos="zoom-in">视觉一中</a>
+
+      
+    </footer>
+  </div>
+    <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
+      <div class="article-nav-link-wrap left">
+            <img data-src="/covers/bg8.webp" data-sizes="auto" alt="SkyVideo更新日志" class="lazyload">
+        <a href="/posts/4450eb29/" aria-label="前一篇: SkyVideo更新日志" title="前一篇: SkyVideo更新日志"></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">
+            SkyVideo更新日志
+        </h3>
+      </div>
+    <div class="article-nav-link-wrap right">
+          <img data-src="/covers/bg5.webp" data-sizes="auto" alt="Kali安装教程" class="lazyload">
+      <a href="/posts/f31053a2/" aria-label="后一篇: Kali安装教程"  title="后一篇: Kali安装教程"></a>
+      <div class="article-nav-caption">后一篇</div>
+      <h3 class="article-nav-title">
+          Kali安装教程
+      </h3>
+    </div>
+  </nav>
+
+</article>
+
+  <section id="comments" data-aos="fade-up">
+    <div class="comment-header">
+        
+      <h2 class="comment-title">说些什么吧！</h2>
+      <div class="comment-selector">
+        <div class="comment-selector-wrap">
+            <div class="selector-item" data-selector="waline">
+              <span>waline</span>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="comment-content">
+          <div class="comment waline-comment" data-aos="fade-up"
+            id="waline-comment">
+          </div>
+    </div>
+  </section>
+
+</section>
+        </div>
+        <footer id="footer" aria-label="Site footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    <div>
+      <span class="icon-copyright"></span>
+        2022-2026
+        <span class="footer-info-sep rotate"></span>
+      ZnSO4
+    </div>
+      <div>
+        基于&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+      <div>
+        <span class="icon-brush"></span>
+        3.1k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        00:14
+      </div>
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+  </div>
+</footer>
+
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="sidebar-wrap">
+        <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%93%B8-%E8%A7%86%E8%A7%89%E4%B8%80%E4%B8%AD-%E2%80%94-%E5%BC%80%E5%8F%91%E5%8E%86%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">📸 视觉一中 — 开发历程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E4%B8%80%E8%A7%88"><span class="toc-number">1.1.</span> <span class="toc-text">版本一览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-1-%E2%80%94-%F0%9F%A5%9A-%E8%90%8C%E8%8A%BD-%E2%80%9C%E4%BB%8E%E4%B8%80%E8%A1%8C-HTML-%E5%BC%80%E5%A7%8B%E2%80%9D"><span class="toc-number">1.2.</span> <span class="toc-text">v0.1 — 🥚 萌芽 “从一行 HTML 开始”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96"><span class="toc-number">1.2.1.</span> <span class="toc-text">变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%93%E6%97%B6%E7%9A%84%E6%A0%B7%E5%AD%90"><span class="toc-number">1.2.2.</span> <span class="toc-text">当时的样子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-2-%E2%80%94-%F0%9F%8F%97%EF%B8%8F-%E7%AD%91%E5%9F%BA-%E2%80%9C%E8%AE%A9%E5%9B%BE%E7%89%87%E7%9C%9F%E6%AD%A3%E5%B1%9E%E4%BA%8E%E4%BA%91%E7%AB%AF%E2%80%9D"><span class="toc-number">1.3.</span> <span class="toc-text">v0.2 — 🏗️ 筑基 “让图片真正属于云端”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-1"><span class="toc-number">1.3.1.</span> <span class="toc-text">变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.2.</span> <span class="toc-text">新增文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-3-%E2%80%94-%F0%9F%96%BC%EF%B8%8F-%E7%94%BB%E5%BB%8A-%E2%80%9C%E8%AE%A9%E4%BD%9C%E5%93%81%E8%A2%AB%E7%9C%8B%E8%A7%81%E2%80%9D"><span class="toc-number">1.4.</span> <span class="toc-text">v0.3 — 🖼️ 画廊 “让作品被看见”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-2"><span class="toc-number">1.4.1.</span> <span class="toc-text">变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E4%BB%B6-1"><span class="toc-number">1.4.2.</span> <span class="toc-text">新增文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-4-%E2%80%94-%E2%9D%A4%EF%B8%8F-%E4%BA%92%E5%8A%A8-%E2%80%9C%E6%AF%8F%E4%B8%80%E4%BB%BD%E5%96%9C%E6%AC%A2%E9%83%BD%E5%80%BC%E5%BE%97%E8%A2%AB%E8%AE%B0%E5%BD%95%E2%80%9D"><span class="toc-number">1.5.</span> <span class="toc-text">v0.4 — ❤️ 互动 “每一份喜欢都值得被记录”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-3"><span class="toc-number">1.5.1.</span> <span class="toc-text">变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E4%BA%AE%E7%82%B9"><span class="toc-number">1.5.2.</span> <span class="toc-text">技术亮点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-5-%E2%80%94-%F0%9F%94%92-%E5%AE%89%E5%85%A8-%E2%80%9C%E4%BD%A0%E7%9A%84%E4%BD%9C%E5%93%81%E4%BD%A0%E5%81%9A%E4%B8%BB%E2%80%9D"><span class="toc-number">1.6.</span> <span class="toc-text">v0.5 — 🔒 安全 “你的作品你做主”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-4"><span class="toc-number">1.6.1.</span> <span class="toc-text">变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E4%BB%B6-2"><span class="toc-number">1.6.2.</span> <span class="toc-text">新增文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-6-%E2%80%94-%F0%9F%8E%A8-%E7%84%95%E9%A2%9C-%E2%80%9C%E9%A2%9C%E5%80%BC%E5%B0%B1%E6%98%AF%E7%94%9F%E4%BA%A7%E5%8A%9B%E2%80%9D"><span class="toc-number">1.7.</span> <span class="toc-text">v0.6 — 🎨 焕颜 “颜值就是生产力”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-5"><span class="toc-number">1.7.1.</span> <span class="toc-text">变化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%A7%A9-%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F-command-css"><span class="toc-number">1.7.1.1.</span> <span class="toc-text">🧩 设计系统 (command.css)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%8F%A0-%E9%A6%96%E9%A1%B5%E9%87%8D%E6%9E%84-index-html"><span class="toc-number">1.7.1.2.</span> <span class="toc-text">🏠 首页重构 (index.html)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%92%A1-%E5%85%B3%E4%BA%8E%E9%A1%B5-about-html"><span class="toc-number">1.7.1.3.</span> <span class="toc-text">💡 关于页 (about.html)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%93%A4-%E4%B8%8A%E4%BC%A0%E9%A1%B5-upload-html"><span class="toc-number">1.7.1.4.</span> <span class="toc-text">📤 上传页 (upload.html)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-7-%E2%80%94-%E2%9A%A1-%E6%9E%81%E9%80%9F-%E2%80%9C%E5%BF%AB%EF%BC%8C%E6%98%AF%E6%9C%80%E5%A4%A7%E7%9A%84%E8%AF%9A%E6%84%8F%E2%80%9D"><span class="toc-number">1.8.</span> <span class="toc-text">v0.7 — ⚡ 极速 “快，是最大的诚意”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E8%AF%8A%E6%96%AD"><span class="toc-number">1.8.1.</span> <span class="toc-text">问题诊断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E6%8E%AA%E6%96%BD"><span class="toc-number">1.8.2.</span> <span class="toc-text">优化措施</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AF%B9%E6%AF%94"><span class="toc-number">1.8.3.</span> <span class="toc-text">数据对比</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-8-%E2%80%94-%F0%9F%8F%86-%E6%8E%92%E8%A1%8C-%E2%80%9C%E8%AE%A9%E4%BC%98%E7%A7%80%E8%A2%AB%E7%9C%8B%E8%A7%81%E2%80%9D"><span class="toc-number">1.9.</span> <span class="toc-text">v0.8 — 🏆 排行 “让优秀被看见”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-6"><span class="toc-number">1.9.1.</span> <span class="toc-text">变化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v0-9-%E2%80%94-%F0%9F%93%B1-%E5%93%8D%E5%BA%94-%E2%80%9C%E5%A4%A7%E5%B1%8F%E5%B0%8F%E5%B1%8F%EF%BC%8C%E4%BD%93%E9%AA%8C%E5%A6%82%E4%B8%80%E2%80%9D"><span class="toc-number">1.10.</span> <span class="toc-text">v0.9 — 📱 响应 “大屏小屏，体验如一”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E5%8C%96-7"><span class="toc-number">1.10.1.</span> <span class="toc-text">变化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%93%B1-%E5%93%8D%E5%BA%94%E5%BC%8F%E5%A4%A7%E4%BF%AE"><span class="toc-number">1.10.1.1.</span> <span class="toc-text">📱 响应式大修</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%94%A7-%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E7%84%95%E6%96%B0"><span class="toc-number">1.10.1.2.</span> <span class="toc-text">🔧 管理后台焕新</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v1-0-%E2%80%94-%F0%9F%9A%80-%E5%90%AF%E8%88%AA-%E2%80%9C%E6%95%85%E4%BA%8B%E5%88%9A%E5%88%9A%E5%BC%80%E5%A7%8B%E2%80%9D"><span class="toc-number">1.11.</span> <span class="toc-text">v1.0 — 🚀 启航 “故事刚刚开始”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E6%95%B0%E6%8D%AE"><span class="toc-number">1.11.1.</span> <span class="toc-text">最终数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.11.2.</span> <span class="toc-text">项目结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="toc-number">1.11.3.</span> <span class="toc-text">技术栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%B4%E8%B0%A2"><span class="toc-number">1.11.4.</span> <span class="toc-text">致谢</span></a></li></ol></li></ol></li></ol>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="ZnSO4" class="lazyload">
+  <div class="sidebar-author-name">ZnSO4</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">4</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social" >
+</div>
+<div class="sidebar-menu">
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+</div>
+</div>
+  </div>
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+</nav>
+
+    </div>
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png"/>
+        </div>
+      </div>
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+  
+<script src="/js/generator_search.js" defer></script>
+
+
+
+  <script>
+    var setupFirework = () => {
+      if (!false || !window.matchMedia('(max-width: 768px)').matches) {
+        window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'));
+      }
+    }
+  </script>
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js" integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8+pUoWX8n1rgq282T" crossorigin="anonymous" onload="setupFirework()" defer></script>
+
+
+  
+<script src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js" integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE&#x2F;jMSCxD+jAPU55x&#x2F;jj3wlf" crossorigin="anonymous"></script>
+
+  
+<script src="/js/pjax.js"></script>
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "ZnSO4",
+          title: "视觉一中开发日志",
+          url: "http://example.com/posts/1f741666/",
+          excerpt: "",
+          description: "",
+          stripContent: "📸 视觉一中 — 开发历程 呼和浩特第一中学 · 学生图片分享平台从一颗记录校园生活的种子，成长为一个功能完整的图片社区。   版本一览   版本 代号 主题    v0.1 🥚 萌芽 静态页面雏形   v0.2 🏗️ 筑基 OSS 接入与图片上传   v0.3 🖼️ 画廊 图片展示与浏览   v0.4 ❤️ 互动 点赞系统上线   v0.5 🔒 安全 删除密码与权限管理   v0.6 🎨 焕颜 UI 全面重构 — 毛玻璃设计系统   v0.7 ⚡ 极速 性能优化 — 图片压缩与懒加",
+          date: "Wed Dec 31 2025 00:00:00 GMT+0800",
+          updated: "Sat Jun 20 2026 02:27:57 GMT+0800",
+          cover: "/images/banner.webp",
+        };
+      </script>
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+      
+<script src="/js/tabs.js" data-pjax defer></script>
+
+      <script type="module" data-pjax>
+        (async () => {
+          const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+          const initPswp = (gallery, children) => {
+            if (_$$(`${gallery} ${children}`).length > 0) {
+              new PhotoSwipeLightbox({
+                gallery,
+                children,
+                pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+              }).init();
+            }
+          }
+          const pswp = () => {
+            initPswp('.article-entry', 'a.article-gallery-item');
+            initPswp('.article-gallery', 'a.article-gallery-item');
+          }
+          pswp();
+        })();
+      </script>
+        
+
+<script data-pjax>
+  var loadScript = (src, integrity) => {
+    const script = document.createElement('script');
+    script.src = src;
+    if (integrity) script.integrity = integrity;
+    script.crossOrigin = 'anonymous';
+    return script;
+  };
+
+  var commentConfigKeys = ["waline"];
+  var commentConfig = {
+    waline: {
+      enable: true,
+      load: async () => {
+        const container = document.querySelector('.waline-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        let walineInit;
+        const walineCdn = 'https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.mjs';
+        const walineIntegrity = 'sha384-9sbqJjrfGjbkI6/PI4nU/MvBfEmkkPC4YK9I4zBeMIf1CVCZdCMH/KinBEAZII/5';
+
+        const module = await safeImport(walineCdn, walineIntegrity);
+        walineInit = module.init;
+
+        window.walineInstance = walineInit({
+          el: '.waline-comment',
+          serverURL: 'https://admin.developer-liu.space/',
+          lang: document.documentElement.lang || 'en',
+          locale: {},
+          emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
+          meta: ["nick","mail","link"],
+          requiredMeta: ["nick"],
+          wordLimit: JSON.parse('0'),
+          comment: true,
+          pageSize: JSON.parse('10'),
+          dark: 'html[data-theme="dark"]',
+          pageview: JSON.parse('true'),
+        });
+      }
+    },
+  }
+  commentConfig.enable = commentConfigKeys.some(key => commentConfig[key].enable);
+
+  var defaultComment = '';
+  if (commentConfig.enable) {
+    // 1. 首先检查localStorage中是否有保存的评论类型
+    var savedCommentType = localStorage.getItem('commentType');
+    
+    // 2. 如果localStorage中有值且对应的评论系统可用，就使用它
+    if (savedCommentType) {
+      if (commentConfig[savedCommentType]?.enable) {
+        defaultComment = savedCommentType;
+      }
+    }
+    
+    // 3. 如果localStorage无效，检查配置的默认评论系统
+    if (!defaultComment) {
+      var configDefault = 'waline';
+      if (commentConfig[configDefault]?.enable) {
+        defaultComment = configDefault;
+      }
+    }
+    
+    // 4. 如果前两项都无效，按指定顺序找到第一个可用的评论系统
+    if (!defaultComment) {
+      defaultComment = commentConfigKeys.find(sys => commentConfig[sys].enable) || '';
+    }
+  }
+  function loadComments() {
+    if (!commentConfig.enable) return;
+    const loadedComments = {
+      valine: false,
+      waline: false,
+      twikoo: false,
+      gitalk: false,
+      giscus: false
+    };
+
+    // 隐藏所有评论容器
+    const hideAllComments = () => {
+      const commentContainers = document.querySelectorAll('.comment');
+      commentContainers.forEach(container => {
+        container.style.display = 'none';
+      });
+    };
+
+    // 按需加载评论系统
+    const loadCommentSystem = (type) => {
+      if (loadedComments[type]) {
+        // 如果已加载，只需显示对应容器
+        document.querySelector(`.${type}-comment`).style.display = 'block';
+        return;
+      }
+
+      // 根据类型加载对应的脚本
+      commentConfig[type]?.load();
+      loadedComments[type] = true;
+    };
+
+    // 评论组件选择器
+    const changeActiveCommentItems = (item) => {
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let i = 0; i < commentItems.length; i++) {
+        commentItems[i].classList.remove('active');
+      }
+      item.classList.add('active');
+
+      // 获取要加载的评论系统类型
+      const commentType = item.getAttribute('data-selector');
+
+      // 隐藏所有评论系统
+      hideAllComments();
+
+      // 加载选中的评论系统
+      loadCommentSystem(commentType);
+    };
+
+    const commentInit = () => {
+      // 评论组件选择器点击事件
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let item of commentItems) {
+        item.addEventListener('click', () => {
+          // 保存选择器状态
+          const commentType = item.getAttribute('data-selector');
+          window.localStorage.setItem('commentType', commentType);
+          // 切换选中状态
+          changeActiveCommentItems(item);
+        });
+      }
+
+      // 检查是否需要加载默认评论系统
+      if (defaultComment) {
+        const defaultSelectorItem = document.querySelector(`[data-selector="${defaultComment}"]`);
+        if (!defaultSelectorItem) return;
+        defaultSelectorItem.style.display = 'block';
+        defaultSelectorItem.classList.add('active');
+        loadCommentSystem(defaultComment);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', commentInit);
+    } else {
+      commentInit();
+    }
+  };
+  loadComments();
+</script>
+
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.11.2' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+    <script>
+      var setupAPlayer = () => {
+        if (!false || !window.matchMedia('(max-width: 768px)').matches) {
+          if (window.matchMedia('(max-width: 959px)').matches) {
+            const meting = _$('meting-js');
+            if (meting) {
+              meting.setAttribute('fixed', 'true');
+              const aside = meting.parentNode?.parentNode;
+              if (aside?.tagName === 'ASIDE') {
+                meting.parentNode.removeChild(meting);
+                document.body.appendChild(meting);
+              }
+            }
+          }
+        }
+      };
+    </script>
+  
+<script src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr+h5UfruuRL&#x2F;aORyw+5+HZoU6e" crossorigin="anonymous" defer onload="setupAPlayer()"></script>
+
+    
+<script src="https://npm.webcache.cn/meting@2.0.1/dist/Meting.min.js" integrity="sha384-ASVlpKF80A22OXTK3tfEjZm1EL6uFMKIC4p8+0maanw1S&#x2F;IyB+Y4JG+ZDU7GpKE8" crossorigin="anonymous" defer></script>
+
+
+
+  </body>
+  </html>
