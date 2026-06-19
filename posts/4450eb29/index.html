@@ -17,15 +17,15 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="SkyVideo v2.1 更新日志 舍弃了臃肿的opencv架构，改为使用更适合Android的架构 极度缩减了文件大小 提供了使用说明 优化了帧率上线定档2月17日，与您一起过新年！   SkyVideo v1.12 更新日志 修复了一些已知问题 修复了在某些设备上无障碍服务导致的崩溃问题 优化了OpenCV性能 添加了关闭悬浮窗的功能不限速下载链接   SkyVideo v1.1 更新日志">
+    <meta name="description" content="🛑 项目终止公告 尊敬的 SkyVideo 用户，您好！我们怀着十分遗憾的心情向您告知，SkyVideo 项目 因不可抗力因素，即日起 正式停止开发与维护。  自项目启动以来，我们始终致力于为您提供优质、高效的服务体验。然而，由于外部客观环境的变化，项目所依赖的部分关键资源与技术条件已无法继续维持，经过团队审慎评估，我们不得不做出这一艰难决定。  📦 后续安排   事项 说明    现有">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SkyVideo更新日志">
 <meta property="og:url" content="http://example.com/posts/4450eb29/index.html">
 <meta property="og:site_name" content="Liu &#39;s Development Log">
-<meta property="og:description" content="SkyVideo v2.1 更新日志 舍弃了臃肿的opencv架构，改为使用更适合Android的架构 极度缩减了文件大小 提供了使用说明 优化了帧率上线定档2月17日，与您一起过新年！   SkyVideo v1.12 更新日志 修复了一些已知问题 修复了在某些设备上无障碍服务导致的崩溃问题 优化了OpenCV性能 添加了关闭悬浮窗的功能不限速下载链接   SkyVideo v1.1 更新日志">
+<meta property="og:description" content="🛑 项目终止公告 尊敬的 SkyVideo 用户，您好！我们怀着十分遗憾的心情向您告知，SkyVideo 项目 因不可抗力因素，即日起 正式停止开发与维护。  自项目启动以来，我们始终致力于为您提供优质、高效的服务体验。然而，由于外部客观环境的变化，项目所依赖的部分关键资源与技术条件已无法继续维持，经过团队审慎评估，我们不得不做出这一艰难决定。  📦 后续安排   事项 说明    现有">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-02-10T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-02-10T16:09:32.046Z">
+<meta property="article:modified_time" content="2026-06-19T17:06:24.911Z">
 <meta property="article:author" content="ZnSO4">
 <meta property="article:tag" content="development, programming, blog">
 <meta name="twitter:card" content="summary">
@@ -167,7 +167,7 @@
     <div class="sidebar-wrap" data-aos="fade-up">
           <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SkyVideo-v2-1-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">1.</span> <span class="toc-text">SkyVideo v2.1 更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%88%8D%E5%BC%83%E4%BA%86%E8%87%83%E8%82%BF%E7%9A%84opencv%E6%9E%B6%E6%9E%84%EF%BC%8C%E6%94%B9%E4%B8%BA%E4%BD%BF%E7%94%A8%E6%9B%B4%E9%80%82%E5%90%88Android%E7%9A%84%E6%9E%B6%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">舍弃了臃肿的opencv架构，改为使用更适合Android的架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%81%E5%BA%A6%E7%BC%A9%E5%87%8F%E4%BA%86%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F"><span class="toc-number">1.2.</span> <span class="toc-text">极度缩减了文件大小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E4%BE%9B%E4%BA%86%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">1.3.</span> <span class="toc-text">提供了使用说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86%E5%B8%A7%E7%8E%87"><span class="toc-number">1.4.</span> <span class="toc-text">优化了帧率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E7%BA%BF%E5%AE%9A%E6%A1%A32%E6%9C%8817%E6%97%A5%EF%BC%8C%E4%B8%8E%E6%82%A8%E4%B8%80%E8%B5%B7%E8%BF%87%E6%96%B0%E5%B9%B4%EF%BC%81"><span class="toc-number">1.5.</span> <span class="toc-text">上线定档2月17日，与您一起过新年！</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SkyVideo-v1-12-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">2.</span> <span class="toc-text">SkyVideo v1.12 更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%BA%9B%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98"><span class="toc-number">2.1.</span> <span class="toc-text">修复了一些已知问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E4%BA%86%E5%9C%A8%E6%9F%90%E4%BA%9B%E8%AE%BE%E5%A4%87%E4%B8%8A%E6%97%A0%E9%9A%9C%E7%A2%8D%E6%9C%8D%E5%8A%A1%E5%AF%BC%E8%87%B4%E7%9A%84%E5%B4%A9%E6%BA%83%E9%97%AE%E9%A2%98"><span class="toc-number">2.2.</span> <span class="toc-text">修复了在某些设备上无障碍服务导致的崩溃问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86OpenCV%E6%80%A7%E8%83%BD"><span class="toc-number">2.3.</span> <span class="toc-text">优化了OpenCV性能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%BA%86%E5%85%B3%E9%97%AD%E6%82%AC%E6%B5%AE%E7%AA%97%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">2.4.</span> <span class="toc-text">添加了关闭悬浮窗的功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E9%99%90%E9%80%9F%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-number">2.5.</span> <span class="toc-text">不限速下载链接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SkyVideo-v1-1-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">3.</span> <span class="toc-text">SkyVideo v1.1 更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%BA%9B%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98-1"><span class="toc-number">3.1.</span> <span class="toc-text">修复了一些已知问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96%E9%80%BB%E8%BE%91"><span class="toc-number">3.2.</span> <span class="toc-text">优化了权限获取逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86OpenCV%E6%80%A7%E8%83%BD-1"><span class="toc-number">3.3.</span> <span class="toc-text">优化了OpenCV性能</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%9B%91-%E9%A1%B9%E7%9B%AE%E7%BB%88%E6%AD%A2%E5%85%AC%E5%91%8A"><span class="toc-number">1.</span> <span class="toc-text">🛑 项目终止公告</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8A%E6%95%AC%E7%9A%84-SkyVideo-%E7%94%A8%E6%88%B7%EF%BC%8C%E6%82%A8%E5%A5%BD%EF%BC%81"><span class="toc-number">1.1.</span> <span class="toc-text">尊敬的 SkyVideo 用户，您好！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A6-%E5%90%8E%E7%BB%AD%E5%AE%89%E6%8E%92"><span class="toc-number">1.2.</span> <span class="toc-text">📦 后续安排</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%99%8F-%E8%87%B4%E8%B0%A2"><span class="toc-number">1.3.</span> <span class="toc-text">🙏 致谢</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SkyVideo-v2-1-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">2.</span> <span class="toc-text">SkyVideo v2.1 更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%88%8D%E5%BC%83%E4%BA%86%E8%87%83%E8%82%BF%E7%9A%84opencv%E6%9E%B6%E6%9E%84%EF%BC%8C%E6%94%B9%E4%B8%BA%E4%BD%BF%E7%94%A8%E6%9B%B4%E9%80%82%E5%90%88Android%E7%9A%84%E6%9E%B6%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">舍弃了臃肿的opencv架构，改为使用更适合Android的架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%81%E5%BA%A6%E7%BC%A9%E5%87%8F%E4%BA%86%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F"><span class="toc-number">2.2.</span> <span class="toc-text">极度缩减了文件大小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E4%BE%9B%E4%BA%86%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">2.3.</span> <span class="toc-text">提供了使用说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86%E5%B8%A7%E7%8E%87"><span class="toc-number">2.4.</span> <span class="toc-text">优化了帧率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E7%BA%BF%E5%AE%9A%E6%A1%A32%E6%9C%8817%E6%97%A5%EF%BC%8C%E4%B8%8E%E6%82%A8%E4%B8%80%E8%B5%B7%E8%BF%87%E6%96%B0%E5%B9%B4%EF%BC%81"><span class="toc-number">2.5.</span> <span class="toc-text">上线定档2月17日，与您一起过新年！</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SkyVideo-v1-12-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">3.</span> <span class="toc-text">SkyVideo v1.12 更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%BA%9B%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98"><span class="toc-number">3.1.</span> <span class="toc-text">修复了一些已知问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E4%BA%86%E5%9C%A8%E6%9F%90%E4%BA%9B%E8%AE%BE%E5%A4%87%E4%B8%8A%E6%97%A0%E9%9A%9C%E7%A2%8D%E6%9C%8D%E5%8A%A1%E5%AF%BC%E8%87%B4%E7%9A%84%E5%B4%A9%E6%BA%83%E9%97%AE%E9%A2%98"><span class="toc-number">3.2.</span> <span class="toc-text">修复了在某些设备上无障碍服务导致的崩溃问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86OpenCV%E6%80%A7%E8%83%BD"><span class="toc-number">3.3.</span> <span class="toc-text">优化了OpenCV性能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%BA%86%E5%85%B3%E9%97%AD%E6%82%AC%E6%B5%AE%E7%AA%97%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">3.4.</span> <span class="toc-text">添加了关闭悬浮窗的功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E9%99%90%E9%80%9F%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-number">3.5.</span> <span class="toc-text">不限速下载链接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SkyVideo-v1-1-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">4.</span> <span class="toc-text">SkyVideo v1.1 更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%BA%9B%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98-1"><span class="toc-number">4.1.</span> <span class="toc-text">修复了一些已知问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96%E9%80%BB%E8%BE%91"><span class="toc-number">4.2.</span> <span class="toc-text">优化了权限获取逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86OpenCV%E6%80%A7%E8%83%BD-1"><span class="toc-number">4.3.</span> <span class="toc-text">优化了OpenCV性能</span></a></li></ol></li></ol>
 </div>
 </div>
           <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
@@ -239,7 +239,7 @@
       <div class="article-date">
   <span class="article-date-link icon-calendar" data-aos="zoom-in">
     <time datetime="2026-02-10T16:00:00.000Z" itemprop="datePublished">2026-02-11</time>
-    <time style="display: none;" id="post-update-time">2026-02-11</time>
+    <time style="display: none;" id="post-update-time">2026-06-20</time>
   </span>
 </div>
 
@@ -248,7 +248,46 @@
     <div class="hr-line"></div>
     
     <div class="e-content article-entry" itemprop="articleBody">
-        <h1 id="SkyVideo-v2-1-更新日志"><a href="#SkyVideo-v2-1-更新日志" class="headerlink" title="SkyVideo v2.1 更新日志"></a>SkyVideo v2.1 更新日志</h1><ul>
+        <!-- ==================== 项目终止公告 ==================== -->
+<div align="center" style="margin: 40px 0; padding: 30px 20px; border: 2px solid #e74c3c; border-radius: 12px; box-shadow: 0 4px 15px rgba(252, 0, 0, 0.15);">
+
+<h1 id="🛑-项目终止公告"><a href="#🛑-项目终止公告" class="headerlink" title="🛑 项目终止公告"></a>🛑 项目终止公告</h1><hr>
+<h3 id="尊敬的-SkyVideo-用户，您好！"><a href="#尊敬的-SkyVideo-用户，您好！" class="headerlink" title="尊敬的 SkyVideo 用户，您好！"></a>尊敬的 SkyVideo 用户，您好！</h3><p>我们怀着十分遗憾的心情向您告知，<strong>SkyVideo 项目</strong> 因不可抗力因素，即日起 <strong>正式停止开发与维护</strong>。</p>
+<blockquote>
+<p>自项目启动以来，我们始终致力于为您提供优质、高效的服务体验。然而，由于外部客观环境的变化，项目所依赖的部分关键资源与技术条件已无法继续维持，经过团队审慎评估，我们不得不做出这一艰难决定。</p>
+</blockquote>
+<h3 id="📦-后续安排"><a href="#📦-后续安排" class="headerlink" title="📦 后续安排"></a>📦 后续安排</h3><table>
+<thead>
+<tr>
+<th align="center">事项</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>现有版本</strong></td>
+<td align="center">v2.1 &#x2F; v1.12 &#x2F; v1.1 仍可正常使用</td>
+</tr>
+<tr>
+<td align="center"><strong>下载链接</strong></td>
+<td align="center">已公布的下载链接持续有效</td>
+</tr>
+<tr>
+<td align="center"><strong>代码仓库</strong></td>
+<td align="center">将归档为只读状态</td>
+</tr>
+<tr>
+<td align="center"><strong>技术支持</strong></td>
+<td align="center">即日起停止更新与维护</td>
+</tr>
+</tbody></table>
+<h3 id="🙏-致谢"><a href="#🙏-致谢" class="headerlink" title="🙏 致谢"></a>🙏 致谢</h3><p>衷心感谢每一位用户长期以来的支持与陪伴。是你们的反馈与鼓励，让 SkyVideo 一路走到今天。</p>
+<p>虽然旅途在此告一段落，但这段经历弥足珍贵。</p>
+<hr>
+<p style="color: #888; font-size: 14px;">SkyVideo 开发团队<br>2026 年 3 月 1 日</p>
+
+</div>
+
+<h1 id="SkyVideo-v2-1-更新日志"><a href="#SkyVideo-v2-1-更新日志" class="headerlink" title="SkyVideo v2.1 更新日志"></a>SkyVideo v2.1 更新日志</h1><ul>
 <li><h4 id="舍弃了臃肿的opencv架构，改为使用更适合Android的架构"><a href="#舍弃了臃肿的opencv架构，改为使用更适合Android的架构" class="headerlink" title="舍弃了臃肿的opencv架构，改为使用更适合Android的架构"></a>舍弃了臃肿的opencv架构，改为使用更适合Android的架构</h4></li>
 <li><h4 id="极度缩减了文件大小"><a href="#极度缩减了文件大小" class="headerlink" title="极度缩减了文件大小"></a>极度缩减了文件大小</h4></li>
 <li><h4 id="提供了使用说明"><a href="#提供了使用说明" class="headerlink" title="提供了使用说明"></a>提供了使用说明</h4></li>
@@ -334,10 +373,10 @@
       </div>
       <div>
         <span class="icon-brush"></span>
-        629
+        901
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:04
+        00:05
       </div>
       <div>
         <span class="icon-eye"></span>
@@ -359,7 +398,7 @@
   <div class="sidebar-wrap">
         <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SkyVideo-v2-1-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">1.</span> <span class="toc-text">SkyVideo v2.1 更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%88%8D%E5%BC%83%E4%BA%86%E8%87%83%E8%82%BF%E7%9A%84opencv%E6%9E%B6%E6%9E%84%EF%BC%8C%E6%94%B9%E4%B8%BA%E4%BD%BF%E7%94%A8%E6%9B%B4%E9%80%82%E5%90%88Android%E7%9A%84%E6%9E%B6%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">舍弃了臃肿的opencv架构，改为使用更适合Android的架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%81%E5%BA%A6%E7%BC%A9%E5%87%8F%E4%BA%86%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F"><span class="toc-number">1.2.</span> <span class="toc-text">极度缩减了文件大小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E4%BE%9B%E4%BA%86%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">1.3.</span> <span class="toc-text">提供了使用说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86%E5%B8%A7%E7%8E%87"><span class="toc-number">1.4.</span> <span class="toc-text">优化了帧率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E7%BA%BF%E5%AE%9A%E6%A1%A32%E6%9C%8817%E6%97%A5%EF%BC%8C%E4%B8%8E%E6%82%A8%E4%B8%80%E8%B5%B7%E8%BF%87%E6%96%B0%E5%B9%B4%EF%BC%81"><span class="toc-number">1.5.</span> <span class="toc-text">上线定档2月17日，与您一起过新年！</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SkyVideo-v1-12-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">2.</span> <span class="toc-text">SkyVideo v1.12 更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%BA%9B%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98"><span class="toc-number">2.1.</span> <span class="toc-text">修复了一些已知问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E4%BA%86%E5%9C%A8%E6%9F%90%E4%BA%9B%E8%AE%BE%E5%A4%87%E4%B8%8A%E6%97%A0%E9%9A%9C%E7%A2%8D%E6%9C%8D%E5%8A%A1%E5%AF%BC%E8%87%B4%E7%9A%84%E5%B4%A9%E6%BA%83%E9%97%AE%E9%A2%98"><span class="toc-number">2.2.</span> <span class="toc-text">修复了在某些设备上无障碍服务导致的崩溃问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86OpenCV%E6%80%A7%E8%83%BD"><span class="toc-number">2.3.</span> <span class="toc-text">优化了OpenCV性能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%BA%86%E5%85%B3%E9%97%AD%E6%82%AC%E6%B5%AE%E7%AA%97%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">2.4.</span> <span class="toc-text">添加了关闭悬浮窗的功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E9%99%90%E9%80%9F%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-number">2.5.</span> <span class="toc-text">不限速下载链接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SkyVideo-v1-1-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">3.</span> <span class="toc-text">SkyVideo v1.1 更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%BA%9B%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98-1"><span class="toc-number">3.1.</span> <span class="toc-text">修复了一些已知问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96%E9%80%BB%E8%BE%91"><span class="toc-number">3.2.</span> <span class="toc-text">优化了权限获取逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86OpenCV%E6%80%A7%E8%83%BD-1"><span class="toc-number">3.3.</span> <span class="toc-text">优化了OpenCV性能</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%9B%91-%E9%A1%B9%E7%9B%AE%E7%BB%88%E6%AD%A2%E5%85%AC%E5%91%8A"><span class="toc-number">1.</span> <span class="toc-text">🛑 项目终止公告</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8A%E6%95%AC%E7%9A%84-SkyVideo-%E7%94%A8%E6%88%B7%EF%BC%8C%E6%82%A8%E5%A5%BD%EF%BC%81"><span class="toc-number">1.1.</span> <span class="toc-text">尊敬的 SkyVideo 用户，您好！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A6-%E5%90%8E%E7%BB%AD%E5%AE%89%E6%8E%92"><span class="toc-number">1.2.</span> <span class="toc-text">📦 后续安排</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%99%8F-%E8%87%B4%E8%B0%A2"><span class="toc-number">1.3.</span> <span class="toc-text">🙏 致谢</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SkyVideo-v2-1-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">2.</span> <span class="toc-text">SkyVideo v2.1 更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%88%8D%E5%BC%83%E4%BA%86%E8%87%83%E8%82%BF%E7%9A%84opencv%E6%9E%B6%E6%9E%84%EF%BC%8C%E6%94%B9%E4%B8%BA%E4%BD%BF%E7%94%A8%E6%9B%B4%E9%80%82%E5%90%88Android%E7%9A%84%E6%9E%B6%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">舍弃了臃肿的opencv架构，改为使用更适合Android的架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%81%E5%BA%A6%E7%BC%A9%E5%87%8F%E4%BA%86%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F"><span class="toc-number">2.2.</span> <span class="toc-text">极度缩减了文件大小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E4%BE%9B%E4%BA%86%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">2.3.</span> <span class="toc-text">提供了使用说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86%E5%B8%A7%E7%8E%87"><span class="toc-number">2.4.</span> <span class="toc-text">优化了帧率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E7%BA%BF%E5%AE%9A%E6%A1%A32%E6%9C%8817%E6%97%A5%EF%BC%8C%E4%B8%8E%E6%82%A8%E4%B8%80%E8%B5%B7%E8%BF%87%E6%96%B0%E5%B9%B4%EF%BC%81"><span class="toc-number">2.5.</span> <span class="toc-text">上线定档2月17日，与您一起过新年！</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SkyVideo-v1-12-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">3.</span> <span class="toc-text">SkyVideo v1.12 更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%BA%9B%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98"><span class="toc-number">3.1.</span> <span class="toc-text">修复了一些已知问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E4%BA%86%E5%9C%A8%E6%9F%90%E4%BA%9B%E8%AE%BE%E5%A4%87%E4%B8%8A%E6%97%A0%E9%9A%9C%E7%A2%8D%E6%9C%8D%E5%8A%A1%E5%AF%BC%E8%87%B4%E7%9A%84%E5%B4%A9%E6%BA%83%E9%97%AE%E9%A2%98"><span class="toc-number">3.2.</span> <span class="toc-text">修复了在某些设备上无障碍服务导致的崩溃问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86OpenCV%E6%80%A7%E8%83%BD"><span class="toc-number">3.3.</span> <span class="toc-text">优化了OpenCV性能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%BA%86%E5%85%B3%E9%97%AD%E6%82%AC%E6%B5%AE%E7%AA%97%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">3.4.</span> <span class="toc-text">添加了关闭悬浮窗的功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E9%99%90%E9%80%9F%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-number">3.5.</span> <span class="toc-text">不限速下载链接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SkyVideo-v1-1-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">4.</span> <span class="toc-text">SkyVideo v1.1 更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%BA%9B%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98-1"><span class="toc-number">4.1.</span> <span class="toc-text">修复了一些已知问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96%E9%80%BB%E8%BE%91"><span class="toc-number">4.2.</span> <span class="toc-text">优化了权限获取逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E4%BA%86OpenCV%E6%80%A7%E8%83%BD-1"><span class="toc-number">4.3.</span> <span class="toc-text">优化了OpenCV性能</span></a></li></ol></li></ol>
 </div>
 </div>
         <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
@@ -509,9 +548,9 @@
           url: "http://example.com/posts/4450eb29/",
           excerpt: "",
           description: "",
-          stripContent: "SkyVideo v2.1 更新日志 舍弃了臃肿的opencv架构，改为使用更适合Android的架构 极度缩减了文件大小 提供了使用说明 优化了帧率上线定档2月17日，与您一起过新年！   SkyVideo v1.12 更新日志 修复了一些已知问题 修复了在某些设备上无障碍服务导致的崩溃问题 优化了OpenCV性能 添加了关闭悬浮窗的功能不限速下载链接   SkyVideo v1.1 更新日志 修复了一些已知问题 优化了权限获取逻辑 优化了OpenCV性能  ",
+          stripContent: "   🛑 项目终止公告 尊敬的 SkyVideo 用户，您好！我们怀着十分遗憾的心情向您告知，SkyVideo 项目 因不可抗力因素，即日起 正式停止开发与维护。  自项目启动以来，我们始终致力于为您提供优质、高效的服务体验。然而，由于外部客观环境的变化，项目所依赖的部分关键资源与技术条件已无法继续维持，经过团队审慎评估，我们不得不做出这一艰难决定。  📦 后续安排   事项 说明    现有版本 v2.1 &amp;#x2F; v1.12 &amp;#x2F; v1.1 仍可正常使用   下载链接 已公布",
           date: "Wed Feb 11 2026 00:00:00 GMT+0800",
-          updated: "Wed Feb 11 2026 00:09:32 GMT+0800",
+          updated: "Sat Jun 20 2026 01:06:24 GMT+0800",
           cover: "/images/banner.webp",
         };
       </script>
@@ -574,7 +613,7 @@
           locale: {},
           emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
           meta: ["nick","mail","link"],
-          requiredMeta: ["nick","mail"],
+          requiredMeta: ["nick"],
           wordLimit: JSON.parse('0'),
           comment: true,
           pageSize: JSON.parse('10'),
